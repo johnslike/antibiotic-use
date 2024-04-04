@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup Suggestion Box</title>
+<style>
+  /* CSS for suggestion box */
+  .suggestion-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 9999; /* Ensure the suggestion box is on top */
+    display: none; /* Initially hidden */
+  }
+</style>
+</head>
+<body>
+
+<!-- HTML for suggestion box -->
+<div id="suggestionBox" class="suggestion-box">
+  <p>This is a suggestion box.</p>
+  <p>You can put any content here.</p>
+</div>
+
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  // Function to show the suggestion box
+  function showSuggestionBox() {
+    document.getElementById('suggestionBox').style.display = 'block';
+  }
+
+  // Call the function to show the suggestion box when the page loads
+  showSuggestionBox();
+});
+</script>
+
+</body>
+</html>
